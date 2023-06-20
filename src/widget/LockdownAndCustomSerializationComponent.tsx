@@ -15,10 +15,7 @@ export const LockdownAndCustomSerializationComponent = (props: any): JSX.Element
   const [alert, setAlert] = useState<string | undefined>(undefined);
 
   useEffect(() => {
-    const initialize = async () => {
       setInitialized(true);
-    };
-    initialize();
   }, []);
 
   const webdsTheme = webdsService.ui.getWebDSTheme();
