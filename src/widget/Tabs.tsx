@@ -66,11 +66,9 @@ export const RootTabs = (props: any) => {
 
     const updateSlotData = (slots: any) => {
         let update: any = { ...props.ui };
-        console.log('SLOT:', slots);
         switch (value) {
             case TabIndex.CustomSerialization:
                 update.bootConfig.splice(0, slots.length, ...slots);
-
                 break;
             case TabIndex.Raw:
                 update.bootConfig = slots;

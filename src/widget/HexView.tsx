@@ -200,13 +200,18 @@ export const HexView = (props: any): JSX.Element => {
     };
 
     const onDataChange = (index: any, value: any) => {
-        console.log('DDDDDD', index, value);
         let newData: any = [...table];
         let num: any;
         if (isAscii) {
             num = Number(value);
         } else {
             num = parseInt(value, 16);
+            if (isNaN(num) && value !== '') {
+                return;
+            }
+            if (num > 0xff) {
+                return;
+            }
         }
         newData[index] = num;
         setTable(newData);
