@@ -19,8 +19,8 @@ namespace Attributes {
   export const id = "webds_lockdown_and_custom_serialization_widget";
   export const label = "Lockdown And Custom Serialization";
   export const caption = "Lockdown And Custom Serialization";
-  export const category = "DSDK - Applications";
-  export const rank = 999;
+  export const category = "Device - Configuration";
+  export const rank = 30;
 }
 
 export let webdsService: WebDSService;
